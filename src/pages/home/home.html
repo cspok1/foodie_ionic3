@@ -1,14 +1,38 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+	<ion-grid>
+		<ion-row>
+			<ion-col col-4>
+  <div class="foodie">
+<img src="../assets/imgs/LogoMakr_9iJ3lh.png">
+  </div>
+</ion-col>
+<ion-col col-4>
+	&nbsp;
+</ion-col>
+<ion-col col-4>
+<ion-buttons end>
+<button clear color="dark" ion-button icon-only (click)="goToProfile()">
+<ion-icon name="person"></ion-icon>
+</button>
+</ion-buttons>
+</ion-col>
+</ion-row>
+</ion-grid>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-content class="card-background-page">
+  
+  <ion-card (click)="openrnearme()">
+    <img src="../assets/imgs/nearby-restaurants.png"/>
+  </ion-card>
+
+   <ion-card (click)="openRecipe()">
+    <img src="../assets/imgs/recipes.png"/>
+  </ion-card>
+
+ 
+
+  <ion-card (click)="openSaved()">
+    <img src="../assets/imgs/saved-items.png"/>
+  </ion-card>
 </ion-content>

@@ -1,0 +1,45 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+	<ion-grid>
+		<ion-row>
+			<ion-col col-4>
+  <div class="foodie">
+  <img src="../assets/imgs/Screen Shot 2018-04-16 at 5.12.29 PM.png">
+  </div>
+</ion-col>
+</ion-row>
+</ion-grid>
+</ion-header>
+<ion-content padding>
+<h1>Log In</h1>
+  <form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+    <ion-item>
+      <ion-input formControlName="email" type="email" placeholder="Your email address" [class.invalid]="!loginForm.controls.email.valid && blur">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginForm.controls.email.valid && loginForm.controls.email.dirty">
+      <p>Please enter a valid email address.</p>
+    </ion-item>
+    <ion-item>
+      <ion-input formControlName="password" type="password" placeholder="Your password" [class.invalid]="!loginForm.controls.password.valid && blur">
+      </ion-input>
+    </ion-item>
+    <ion-item class="error-message" *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.dirty">
+      <p>Your password needs more than 6 characters.</p>
+    </ion-item>
+    <button ion-button block type="submit" [disabled]="!loginForm.valid">
+      Log In
+    </button>
+  </form>
+  <button ion-button block color="dark" outline (click)="goToSignup()">
+    Register
+  </button>
+  <button ion-button block color="dark" outline (click)="goToResetPassword()">
+    Forgot Password
+  </button>
+</ion-content>

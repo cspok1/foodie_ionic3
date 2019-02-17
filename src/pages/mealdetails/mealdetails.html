@@ -1,0 +1,85 @@
+<!--
+  Generated template for the MealdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Details</ion-title>
+    <ion-buttons end>
+		<button ion-button icon-only (click)="save()">
+		<ion-icon name="bookmark"></ion-icon>
+		</button>
+	</ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-card>
+  	<img src="{{img}}">
+    <ion-card-content>
+      <ion-card-title>
+        {{strmeal}}
+      </ion-card-title>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            Category
+          </ion-col>
+          <ion-col col-8>
+            <p>: {{category}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-4>
+            Area
+          </ion-col>
+          <ion-col col-8>
+            <p>: {{area}}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+        	<button ion-button color="danger" clear (click)="browser()" block>Show in Youtube &nbsp;<ion-icon name="logo-youtube"></ion-icon>
+</button>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+  <ion-card-header>
+    Ingredients
+  </ion-card-header>
+  <ion-card-content>
+  	<p>{{ingredientsline1}}<br>
+  		{{ingredientsline2}}<br>
+  		{{ingredientsline3}}<br>
+  		{{ingredientsline4}}<br>
+  		{{ingredientsline5}}<br>
+  		{{ingredientsline6}}<br>
+  		{{ingredientsline7}}<br>
+  		{{ingredientsline8}}<br>
+  		{{ingredientsline9}}<br>
+  		{{ingredientsline10}}<br>
+  		{{ingredientsline11}}<br>
+  		{{ingredientsline12}}<br>
+  		{{ingredientsline13}}<br>
+  		{{ingredientsline14}}<br>
+  		{{ingredientsline15}}<br>
+  		{{ingredientsline16}}<br>
+  		{{ingredientsline17}}<br>
+  		{{ingredientsline18}}<br>
+  		{{ingredientsline19}}<br>
+  		{{ingredientsline20}}
+
+  	</p>
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  <ion-card-header>
+    Instructions
+  </ion-card-header>
+  <ion-card-content *ngFor="let line of instr">
+  	<p>{{line}}.</p>
+  </ion-card-content>
+</ion-card>
+</ion-content>
